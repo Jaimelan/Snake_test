@@ -24,8 +24,8 @@ def main():
     w.keypad(1)
     w.timeout(100)
 
-    snk_x = sw/4
-    snk_y = sh/2
+    snk_x = sw//4
+    snk_y = sh//2
 
     snake = [
         [snk_y, snk_x],
@@ -44,7 +44,6 @@ def main():
 
         if snake[0][0] in [0, sh] or snake[0][1] in [0, sw] or snake[0] in snake[1:]:
             curses.endwin()
-
             quit()
         
         new_head = [snake[0][0], snake[0][1]]
